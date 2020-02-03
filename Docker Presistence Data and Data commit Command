@@ -1,0 +1,34 @@
+##Dockerfile Building into Image
+##Image run into Container
+vim dockerfiles
+sudo docker images
+sudo docker rmi IMAGE_ID IMAGE_ID IMAGE_ID
+docker rm Container_ID
+##mejor = 1 minor =1 hotfix  =1  default = latest
+### Building image into container
+sudo dockerr build -t myngnix:1:1:1 .
+sudo docker build -t myngnix .
+##Run image into container -p local port
+sudo docker run -itd -p 80:80 mynginx
+sudo docker ps
+sudo docker logs containr_id
+sudo netstat -tulpn |grep LISTEN
+##check container
+localhost:80
+vi index.html (with new text)
+## go inside the container
+sudo docker exec -it id_container /bin/bash
+uname -a
+lsb_release
+vim /var/www/html/index.html
+### Get feveral container data to local file by the help of Data persistence
+sudo docker stop container_id && sudo docker rm cotainer_id
+sudo docker run -itd -p 80:80 --name mynginx -v local_indexfile_path :container_indexfile_path mynginx
+###now make a change on container and see the changes on local machine.
+## go inside the container
+sudo docker run it -p 80:80 --name mynginx mynginx /bin/bash
+##second way to to save changes container to localmachine
+sudo docker ps -a
+sudo docker commit mynginx mynginx:1.1.1
+## take snapshot of running container to new
+sudo docker images
