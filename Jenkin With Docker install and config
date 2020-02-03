@@ -1,4 +1,14 @@
-    1  clear
+###Docker Working Version of Amazon Server
+##Linux ip-172-31-80-16 4.14.154-99.181.amzn1.x86_64 #1 SMP Sat Nov 16 01:38:34 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+#docker-18.09.9ce-2.52.amzn1.x86_64 
+#Working Version of Amazon Server
+#Linux ip-172-31-80-16 4.14.154-99.181.amzn1.x86_64 #1 SMP Sat Nov 16 01:38:34 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+#OPTIONS="-H tcp://172.31.80.16:2376 -H unix:///var/run/docker.sock"
+#Amazon Linux AMI 18.03.0
+#OPTIONS="-H tcp://172.31.80.16:2376 -H unix:///var/run/docker.sock" ##TCP IP Must be itself IP not remote server IP.
+##Amazon Linux AMI 18.03.0
+	
+	1  clear
     2  sudo yum install docker
     3  clear
     4  sudo systemctl status docker
