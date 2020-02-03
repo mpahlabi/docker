@@ -1,0 +1,44 @@
+    1  clear
+    2  sudo yum install docker
+    3  clear
+    4  sudo systemctl status docker
+    5  sudo dervice docker status
+    6  sudo service docker status
+    7  sudo vim /etc/sysconfig/docker
+    8  sudo service docker start
+    9  sudo service docker status
+   10  ps -ef | grep docker
+   11  sudo docker run hello-world
+   12  clear
+   13  sudo docker images
+   14  sudo docker pull jenkinsci/slave
+   15  clear
+   16  ps -ef | grep docker
+   17  sudo docker ps -a
+   18  clear
+   19  docker version
+   20  clear
+   21  sudo docker pull kmlchauhan/centos7-jdk8-mvn3-jenkins:2.00
+   22  sudo docker run -itd -p 8089:8080 kmlchauhan/centos7-jdk8-mvn3-jenkins:2.00
+   23  clear
+   24  sudo docker ps -a
+   25  sudo docker logs 045e96476dcf
+   26  sudo docker stop 045e96476dcf
+   27  sudo docker rm 045e96476dcf
+   28  clear
+   29  sudo docker ps -a
+   30  sudo docker run -itd -p 8088:8080 --name=myjenkins kmlchauhan/centos7-jdk8-mvn3-jenkins:2.00
+   31  sudo docker logs myjenkins
+   32  clear
+   33  sudo docker images
+   34  sudo docker ps -a
+   35  sudo docker exec -it myjenkins /bin/bash
+   36  sudo docker stop myjenkins && sudo docker rm myjenkins
+   37  exit
+   38  history
+   39  sudo service docker restart
+   40  uname -a
+   41  cat /etc/sysconfig/docker
+   42  docker --version
+   43  clear
+   44  history
