@@ -7,6 +7,30 @@
 #Amazon Linux AMI 18.03.0
 #OPTIONS="-H tcp://172.31.80.16:2376 -H unix:///var/run/docker.sock" ##TCP IP Must be itself IP not remote server IP.
 ##Amazon Linux AMI 18.03.0
+
+
+## Command
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock
+Restart the services
+#You will need to restart the services to check the changes.
+sudo systemctl daemon-reload
+sudo service docker restart
+#If you get something like this:
+
+s#ystemctl: command not found
+#You need to install systemd package.
+
+sudo apt-get install systemd -y
+#Checking
+#Now to ensure the API is accessible, send a request to verify the version. These commands are being executed inside the Docker host.
+
+curl http://localhost:4243/version
+#You should see something like this:
+
+#{"ApiVersion":"1.18","Arch":"amd64","GitCommit":"7c8fca2","GoVersion":"go1.2.1","KernelVersion":"3.13.0-145-generic","Os":"linux","Version":"1.6.2"}
+#And it is done!
+
+
 	
 	1  clear
     2  sudo yum install docker
